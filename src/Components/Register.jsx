@@ -3,7 +3,7 @@ import "./Register.css"
 import { Link } from "react-router-dom"
 import { v4 as uuidv4 } from 'uuid';
 
-var itemBottomregisterPage = ["© 2020", "About", "Accessibility", "User Agreement", "Privacy Policy", "Cookie Policy",
+var itemBottomregisterPage = ["© 2023", "About", "Accessibility", "User Agreement", "Privacy Policy", "Cookie Policy",
     "Copyright Policy",
     "Brand Policy",
     "Guest Controls",

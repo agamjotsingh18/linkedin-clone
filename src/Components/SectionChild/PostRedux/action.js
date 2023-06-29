@@ -34,7 +34,7 @@ export const getPostData = () => {
     return (dispatch) => {
       dispatch(PostGetRequest());
       return axios
-        .get("https://linkedinclone-redux.herokuapp.com/posts")
+        .get("http://localhost:3000/posts")
         .then((res) => {
           // console.log("response success", res.data);
           return dispatch(PostGetSuccess(res.data));
@@ -65,7 +65,7 @@ export const UploadingPost = (uploadPost) => {
   return (dispatch) => {
     dispatch(UploadingPostRequest());
     return axios
-      .post("https://linkedinclone-redux.herokuapp.com/posts",{author_title,author_name,author_id,author_username,avatar_url,imagePost,likes,comment})
+      .post("http://localhost:3000/posts",{author_title,author_name,author_id,author_username,avatar_url,imagePost,likes,comment})
       .then((res) => {
         // console.log("upload Post Successful")
         return dispatch(UploadingPostSuccess(res.data))
@@ -109,7 +109,7 @@ export const toggleLike = (action) => {
   return (dispatch) => {
     dispatch(toggleLikeRequest());
     return axios
-      .patch(`https://linkedinclone-redux.herokuapp.com/posts/${PostDataId}`,{
+      .patch(`http://localhost:3000/posts/${PostDataId}`,{
         likes:postLikes
       })
       .then((res) => dispatch(toggleLikeSuccess(res.data)))
@@ -143,7 +143,7 @@ export const postCommentData = (payload) => {
   return (dispatch) => {
     dispatch(PostCommentRequest());
     return axios
-      .patch(`https://linkedinclone-redux.herokuapp.com/posts/${PostDataId}`,{
+      .patch(`http://localhost:3000/posts/${PostDataId}`,{
         comment:comm1
       })
       .then((res) => dispatch(PostCommentSuccess(res.data)))

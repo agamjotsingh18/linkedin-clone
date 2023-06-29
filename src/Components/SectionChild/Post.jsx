@@ -28,8 +28,8 @@ class Post extends Component {
     }
 
     // "author_id": "1", = user_id
-    // "author_name": "Aman Anku", = username_fullname
-    // "author_username": "aman", = username
+    // "author_name": "Agamjot Singh", = username_fullname
+    // "author_username": "agamjot", = username
     // "author_title": "Hello there How are you", =textPost
     // "id": 1,
     // "imagePost": "https://cdn.pixabay.com/photo/2018/06/07/16/49/vr-3460451__340.jpg" =imagePost
